@@ -2,6 +2,7 @@ package model;
 
 public class DnDCharacter
 {
+	private String name;
 	private int strength;
 	private int dexterity;
 	private int constitution;
@@ -9,14 +10,20 @@ public class DnDCharacter
 	private int wisdom;
 	private int charisma;
 
-	public DnDCharacter(int str, int dex, int con, int intel, int wis, int cha)
+	public DnDCharacter(String name, int str, int dex, int con, int intel, int wis, int cha)
 	{
+		this.name = name;
 		this.strength = str;
 		this.dexterity = dex;
 		this.constitution = con;
 		this.intelligence = intel;
 		this.wisdom = wis;
 		this.charisma = cha;
+	}
+
+	public String getName()
+	{
+		return this.name;
 	}
 
 	public int getStr()
@@ -49,28 +56,38 @@ public class DnDCharacter
 		return this.charisma;
 	}
 
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+
 	public void setStr(int str)
 	{
 		this.strength = str;
 	}
-	
-	public void setDex(int dex) {
+
+	public void setDex(int dex)
+	{
 		this.dexterity = dex;
 	}
-	
-	public void setCon(int con) {
+
+	public void setCon(int con)
+	{
 		this.constitution = con;
 	}
-	
-	public void setIntel(int intel) {
+
+	public void setIntel(int intel)
+	{
 		this.intelligence = intel;
 	}
-	
-	public void setWis(int wis) {
+
+	public void setWis(int wis)
+	{
 		this.wisdom = wis;
 	}
-	
-	public void setCha(int cha) {
+
+	public void setCha(int cha)
+	{
 		this.charisma = cha;
 	}
 }
