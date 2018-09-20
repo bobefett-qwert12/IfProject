@@ -2,7 +2,7 @@ package model;
 
 public class DnDCharacter
 {
-	//data members
+	// data members
 	private String name;
 	private int strength;
 	private int dexterity;
@@ -11,7 +11,40 @@ public class DnDCharacter
 	private int wisdom;
 	private int charisma;
 
-	//constructor
+	// constructors
+	/**
+	 * Default constructor for when you don't know the parameters.
+	 * Initializes data members with default values.
+	 */
+	public DnDCharacter()
+	{
+		this.name = "";
+		this.strength = 0;
+		this.dexterity = 0;
+		this.constitution = 0;
+		this.intelligence = 0;
+		this.wisdom = 0;
+		this.charisma = 0;
+	}
+
+	/**
+	 * Better constructor for when you know the parameter values.
+	 * 
+	 * @param name
+	 *            name of the character
+	 * @param str
+	 *            strength of the character (1-30)
+	 * @param dex
+	 *            dexterity of the character (1-30)
+	 * @param con
+	 *            constitution of the character (1-30)
+	 * @param intel
+	 *            intelligence of the character (1-30)
+	 * @param wis
+	 *            wisdom of the character (1-30)
+	 * @param cha
+	 *            charisma of the character (1-30)
+	 */
 	public DnDCharacter(String name, int str, int dex, int con, int intel, int wis, int cha)
 	{
 		this.name = name;
@@ -23,7 +56,7 @@ public class DnDCharacter
 		this.charisma = cha;
 	}
 
-	//getters
+	// getters
 	public String getName()
 	{
 		return this.name;
@@ -59,7 +92,7 @@ public class DnDCharacter
 		return this.charisma;
 	}
 
-	//setters
+	// setters
 	public void setName(String name)
 	{
 		this.name = name;
