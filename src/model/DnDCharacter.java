@@ -2,6 +2,7 @@ package model;
 
 public class DnDCharacter
 {
+	//data members
 	private String name;
 	private int strength;
 	private int dexterity;
@@ -10,6 +11,7 @@ public class DnDCharacter
 	private int wisdom;
 	private int charisma;
 
+	//constructor
 	public DnDCharacter(String name, int str, int dex, int con, int intel, int wis, int cha)
 	{
 		this.name = name;
@@ -21,6 +23,7 @@ public class DnDCharacter
 		this.charisma = cha;
 	}
 
+	//getters
 	public String getName()
 	{
 		return this.name;
@@ -56,6 +59,7 @@ public class DnDCharacter
 		return this.charisma;
 	}
 
+	//setters
 	public void setName(String name)
 	{
 		this.name = name;
