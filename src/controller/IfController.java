@@ -19,6 +19,21 @@ public class IfController
 	 */
 	public void start()
 	{
+		JOptionPane.showMessageDialog(null, "You either kill yourself or you get killed.");
+		startLooping();
+	}
 
+	private void startLooping()
+	{
+		boolean isDone = false;
+		int count = 0;
+		while (!isDone)
+		{
+			JOptionPane.showMessageDialog(null, "Hey! Ho! What'chu gon' do?");
+			count --;
+			if(count <= -10) {
+				isDone = true;
+			}
+		}
 	}
 }
