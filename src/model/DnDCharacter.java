@@ -127,4 +127,16 @@ public class DnDCharacter
 	{
 		this.charisma = cha;
 	}
+	
+	public String getCharacter() {
+		String user;
+		user = "Your character, " + name
+				+ " has a strength of " + strength
+				+ ", a dexterity of " + dexterity
+				+ ", a constitution of " + constitution
+				+ ", an intelligence of " + intelligence
+				+ ", a wisdom of " + wisdom
+				+ ", and a charisma of " + charisma;
+		return user;
+	}
 }

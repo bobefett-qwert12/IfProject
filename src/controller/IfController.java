@@ -20,7 +20,7 @@ public class IfController
 	public void start()
 	{
 		JOptionPane.showMessageDialog(null, "You either kill yourself or you get killed.");
-		// startLooping();
+		startLooping();
 		askUser();
 	}
 
@@ -45,20 +45,74 @@ public class IfController
 
 	private void askUser()
 	{
-		String response = JOptionPane.showInputDialog(null, "What is the distance?");
-		while (!validDouble(response))
+		DnDCharacter userChar = new DnDCharacter();
+		String response = JOptionPane.showInputDialog(null, "What is your character's name?");
+		userChar.setName(response);
+		response = JOptionPane.showInputDialog(null, "What is your character's strength?");
+		while (!validInt(response))
 		{
-			response = JOptionPane.showInputDialog(null, "How about an actual number for the distance?");
+			response = JOptionPane.showInputDialog(null, "How about an actual number for the strength?");
 		}
+		userChar.setStr(Integer.parseInt(response));
+		response = JOptionPane.showInputDialog(null, "What is your character's dexterity?");
+		while (!validInt(response))
+		{
+			response = JOptionPane.showInputDialog(null, "How about an actual number for the dexterity?");
+		}
+		userChar.setDex(Integer.parseInt(response));
+		response = JOptionPane.showInputDialog(null, "What is your character's constitution?");
+		while (!validInt(response))
+		{
+			response = JOptionPane.showInputDialog(null, "How about an actual number for the constitution?");
+		}
+		userChar.setCon(Integer.parseInt(response));
+		response = JOptionPane.showInputDialog(null, "What is your character's intelligence?");
+		while (!validInt(response))
+		{
+			response = JOptionPane.showInputDialog(null, "How about an actual number for the intelligence?");
+		}
+		userChar.setIntel(Integer.parseInt(response));
+		response = JOptionPane.showInputDialog(null, "What is your character's wisdom?");
+		while (!validInt(response))
+		{
+			response = JOptionPane.showInputDialog(null, "How about an actual number for the wisdom?");
+		}
+		userChar.setWis(Integer.parseInt(response));
+		response = JOptionPane.showInputDialog(null, "What is your character's charisma?");
+		while (!validInt(response))
+		{
+			response = JOptionPane.showInputDialog(null, "How about an actual number for the charisma");
+		}
+		userChar.setCha(Integer.parseInt(response));
+		JOptionPane.showMessageDialog(null, userChar.getCharacter());
 	}
-	private boolean validDouble(String maybeDouble) {
+
+	public boolean validDouble(String maybeDouble)
+	{
 		boolean isValid = false;
-		try {
+		try
+		{
 			Double.parseDouble(maybeDouble);
 			isValid = true;
 		}
-		catch(NumberFormatException e) {
+		catch (NumberFormatException e)
+		{
 			JOptionPane.showMessageDialog(null, "Sorry, that's not a double.");
+		}
+		return isValid;
+	}
+
+	public boolean validInt(String maybeInt)
+	{
+		boolean isValid = false;
+		try
+		{
+			Integer.parseInt(maybeInt);
+			isValid = true;
+		}
+		catch (NumberFormatException e)
+		{
+			JOptionPane.showMessageDialog(null, "Sorry, that's not an integer.");
 		}
 		return isValid;
 	}
