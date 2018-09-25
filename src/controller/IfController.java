@@ -19,8 +19,8 @@ public class IfController
 	 */
 	public void start()
 	{
-		JOptionPane.showMessageDialog(null, "You either kill yourself or you get killed.");
-		startLooping();
+		//JOptionPane.showMessageDialog(null, "You either kill yourself or you get killed.");
+		//startLooping();
 		askUser();
 	}
 
