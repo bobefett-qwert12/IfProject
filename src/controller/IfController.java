@@ -21,7 +21,10 @@ public class IfController
 	{
 		//JOptionPane.showMessageDialog(null, "You either kill yourself or you get killed.");
 		//startLooping();
-		askUser();
+		for (int i = 0; i <3; i++) {
+			JOptionPane.showMessageDialog(null, "You will be making a new DnD Character. This is Character #" + (i+1) + ":");
+			askUser();
+		}
 	}
 
 	private void startLooping()
@@ -84,7 +87,7 @@ public class IfController
 			response = JOptionPane.showInputDialog(null, "How about an actual number for the charisma");
 		}
 		userChar.setCha(Integer.parseInt(response));
-		JOptionPane.showMessageDialog(null, userChar.getCharacter());
+		JOptionPane.showMessageDialog(null, userChar);
 	}
 
 	public boolean validDouble(String maybeDouble)

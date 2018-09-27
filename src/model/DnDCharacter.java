@@ -128,7 +128,7 @@ public class DnDCharacter
 		this.charisma = cha;
 	}
 	
-	public String getCharacter() {
+	public String toString() {
 		String user;
 		user = "Your character, " + name
 				+ " has a strength of " + strength
