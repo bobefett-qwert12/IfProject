@@ -13,8 +13,8 @@ public class DnDCharacter
 
 	// constructors
 	/**
-	 * Default constructor for when you don't know the parameters.
-	 * Initializes data members with default values.
+	 * Default constructor for when you don't know the parameters. Initializes data
+	 * members with default values.
 	 */
 	public DnDCharacter()
 	{
@@ -127,16 +127,17 @@ public class DnDCharacter
 	{
 		this.charisma = cha;
 	}
-	
-	public String toString() {
+
+	public String toString()
+	{
 		String user;
-		user = "Your character, " + name
-				+ " has a strength of " + strength
-				+ ", a dexterity of " + dexterity
-				+ ", a constitution of " + constitution
-				+ ", an intelligence of " + intelligence
-				+ ", a wisdom of " + wisdom
-				+ ", and a charisma of " + charisma;
+		user = "Your character, " + name;
+		user += " has a strength of " + strength;
+		user += ", a dexterity of " + dexterity;
+		user += ", a constitution of " + constitution;
+		user += ", an intelligence of " + intelligence;
+		user += ", a wisdom of " + wisdom;
+		user += ", and a charisma of " + charisma;
 		return user;
 	}
 }

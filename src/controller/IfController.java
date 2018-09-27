@@ -52,37 +52,37 @@ public class IfController
 		String response = JOptionPane.showInputDialog(null, "What is your character's name?");
 		userChar.setName(response);
 		response = JOptionPane.showInputDialog(null, "What is your character's strength?");
-		while (!validInt(response))
+		while (response == null || !validInt(response))
 		{
 			response = JOptionPane.showInputDialog(null, "How about an actual number for the strength?");
 		}
 		userChar.setStr(Integer.parseInt(response));
 		response = JOptionPane.showInputDialog(null, "What is your character's dexterity?");
-		while (!validInt(response))
+		while (response == null || !validInt(response))
 		{
 			response = JOptionPane.showInputDialog(null, "How about an actual number for the dexterity?");
 		}
 		userChar.setDex(Integer.parseInt(response));
 		response = JOptionPane.showInputDialog(null, "What is your character's constitution?");
-		while (!validInt(response))
+		while (response == null || !validInt(response))
 		{
 			response = JOptionPane.showInputDialog(null, "How about an actual number for the constitution?");
 		}
 		userChar.setCon(Integer.parseInt(response));
 		response = JOptionPane.showInputDialog(null, "What is your character's intelligence?");
-		while (!validInt(response))
+		while (response == null || !validInt(response))
 		{
 			response = JOptionPane.showInputDialog(null, "How about an actual number for the intelligence?");
 		}
 		userChar.setIntel(Integer.parseInt(response));
 		response = JOptionPane.showInputDialog(null, "What is your character's wisdom?");
-		while (!validInt(response))
+		while (response == null || !validInt(response))
 		{
 			response = JOptionPane.showInputDialog(null, "How about an actual number for the wisdom?");
 		}
 		userChar.setWis(Integer.parseInt(response));
 		response = JOptionPane.showInputDialog(null, "What is your character's charisma?");
-		while (!validInt(response))
+		while (response == null || !validInt(response))
 		{
 			response = JOptionPane.showInputDialog(null, "How about an actual number for the charisma");
 		}
