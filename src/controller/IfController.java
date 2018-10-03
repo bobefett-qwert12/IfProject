@@ -129,7 +129,7 @@ public class IfController
 		while (!isDone)
 		{
 			String difficulty = JOptionPane.showInputDialog(null, "Welcome to the quiz show! Please enter your desired difficulty (1=easy, 2=average, 3=hard):");
-			while (difficulty == null || !validInt(difficulty) || Integer.parseInt(difficulty) != 1 || Integer.parseInt(difficulty) != 2 || Integer.parseInt(difficulty) != 3)
+			while (difficulty == null || !validInt(difficulty) ||( Integer.parseInt(difficulty) != 1 && Integer.parseInt(difficulty) != 2 && Integer.parseInt(difficulty) != 3))
 			{
 				difficulty = JOptionPane.showInputDialog(null, "Please enter 1 (easy), 2 (average), or 3 (hard) for difficulty:");
 			}
