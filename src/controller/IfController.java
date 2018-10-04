@@ -3,6 +3,7 @@ package controller;
 //import section
 import model.DnDCharacter;
 import javax.swing.JOptionPane;
+import java.util.ArrayList;
 
 public class IfController
 {
@@ -19,15 +20,34 @@ public class IfController
 	 */
 	public void start()
 	{
-		// JOptionPane.showMessageDialog(null, "You either kill yourself or you get
-		// killed.");
-		// startLooping();
+		JOptionPane.showMessageDialog(null, "You either kill yourself or you get killed.");
+		startLooping();
 		loopForDays();
-//		for (int i = 0; i < 3; i++)
-//		{
-//			JOptionPane.showMessageDialog(null, "You will be making a new DnD Character. This is Character #" + (i + 1) + ":");
-//			askUser();
-//		}
+		for (int i = 0; i < 3; i++)
+		{
+		JOptionPane.showMessageDialog(null, "You will be making a new DnD Character. This is Character #" + (i + 1) + ":");
+		askUser();
+		}
+		lotsOfCharacter();
+	}
+
+	private void lotsOfCharacter()
+	{
+		ArrayList<DnDCharacter> myChar = new ArrayList<DnDCharacter>();
+		DnDCharacter sampleChar = new DnDCharacter();
+		DnDCharacter otherChar = new DnDCharacter();
+		myChar.add(sampleChar);
+		myChar.add(sampleChar);
+		myChar.add(otherChar);
+		for (int i = 0; i < myChar.size(); i++)
+		{
+			DnDCharacter currentChar = myChar.get(i);
+			currentChar.setCon(i*currentChar.getCon());
+		}
+		for (DnDCharacter current : myChar)
+		{
+			JOptionPane.showMessageDialog(null, "This run is named " + current.getName());
+		}
 	}
 
 	private void startLooping()
@@ -129,7 +149,7 @@ public class IfController
 		while (!isDone)
 		{
 			String difficulty = JOptionPane.showInputDialog(null, "Welcome to the quiz show! Please enter your desired difficulty (1=easy, 2=average, 3=hard):");
-			while (difficulty == null || !validInt(difficulty) ||( Integer.parseInt(difficulty) != 1 && Integer.parseInt(difficulty) != 2 && Integer.parseInt(difficulty) != 3))
+			while (difficulty == null || !validInt(difficulty) || (Integer.parseInt(difficulty) != 1 && Integer.parseInt(difficulty) != 2 && Integer.parseInt(difficulty) != 3))
 			{
 				difficulty = JOptionPane.showInputDialog(null, "Please enter 1 (easy), 2 (average), or 3 (hard) for difficulty:");
 			}
@@ -168,7 +188,7 @@ public class IfController
 					if (userAnswer.toLowerCase().equals(correctAnswer))
 					{
 						JOptionPane.showMessageDialog(null, "That's right! you did it!");
-						pointCount ++;
+						pointCount++;
 					}
 					else
 					{
@@ -177,7 +197,8 @@ public class IfController
 				}
 				JOptionPane.showMessageDialog(null, "Congratulations! you got " + pointCount + " points!");
 				String playAgain = JOptionPane.showInputDialog(null, "Would you like to play again? y/n:");
-				if (playAgain.toLowerCase().equals("n")) {
+				if (playAgain.toLowerCase().equals("n"))
+				{
 					isDone = true;
 				}
 			}
@@ -216,7 +237,7 @@ public class IfController
 					if (userAnswer.toLowerCase().equals(correctAnswer))
 					{
 						JOptionPane.showMessageDialog(null, "That's right! you did it!");
-						pointCount ++;
+						pointCount++;
 					}
 					else
 					{
@@ -225,7 +246,8 @@ public class IfController
 				}
 				JOptionPane.showMessageDialog(null, "Congratulations! you got " + pointCount + " points!");
 				String playAgain = JOptionPane.showInputDialog(null, "Would you like to play again? y/n:");
-				if (playAgain.toLowerCase().equals("n")) {
+				if (playAgain.toLowerCase().equals("n"))
+				{
 					isDone = true;
 				}
 			}
@@ -264,7 +286,7 @@ public class IfController
 					if (userAnswer.toLowerCase().equals(correctAnswer))
 					{
 						JOptionPane.showMessageDialog(null, "That's right! you did it!");
-						pointCount ++;
+						pointCount++;
 					}
 					else
 					{
@@ -273,7 +295,8 @@ public class IfController
 				}
 				JOptionPane.showMessageDialog(null, "Congratulations! you got " + pointCount + " points!");
 				String playAgain = JOptionPane.showInputDialog(null, "Would you like to play again? y/n:");
-				if (playAgain.toLowerCase().equals("n")) {
+				if (playAgain.toLowerCase().equals("n"))
+				{
 					isDone = true;
 				}
 			}
