@@ -156,7 +156,7 @@ public class IfController
 			if (Integer.parseInt(difficulty) == 1)
 			{
 				int pointCount = 0;
-				for (int i = 0; i < 5; i++)
+				for (int i = 1; i <= 5; i++)
 				{
 					String question = "";
 					String correctAnswer = "";
@@ -195,7 +195,7 @@ public class IfController
 						JOptionPane.showMessageDialog(null, "Sorry, that's the wrong answer. The correct answer was " + correctAnswer + ".");
 					}
 				}
-				JOptionPane.showMessageDialog(null, "Congratulations! you got " + pointCount + " points!");
+				JOptionPane.showMessageDialog(null, "Congratulations! you got " + pointCount + "/5 points!");
 				String playAgain = JOptionPane.showInputDialog(null, "Would you like to play again? y/n:");
 				if (playAgain.toLowerCase().equals("n"))
 				{
