@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class IfController
 {
 	/**
-	 * Builds the instance of the Controller
+	 * Builds the instance of the Controller (idk why)
 	 */
 	public IfController()
 	{
@@ -31,6 +31,9 @@ public class IfController
 		lotsOfCharacter();
 	}
 
+	/**
+	 * puts characters in a list and messes with them
+	 */
 	private void lotsOfCharacter()
 	{
 		ArrayList<DnDCharacter> myChar = new ArrayList<DnDCharacter>();
@@ -69,6 +72,9 @@ public class IfController
 		}
 	}
 
+	/**
+	 * allows the user to create a DnD Character
+	 */
 	private void askUser()
 	{
 		DnDCharacter userChar = new DnDCharacter();
@@ -143,6 +149,9 @@ public class IfController
 		return isValid;
 	}
 
+	/**
+	 * allows the user to participate in a quiz show
+	 */
 	public void loopForDays()
 	{
 		boolean isDone = false;
@@ -205,7 +214,7 @@ public class IfController
 			else if (Integer.parseInt(difficulty) == 2)
 			{
 				int pointCount = 0;
-				for (int i = 0; i < 5; i++)
+				for (int i = 1; i <= 5; i++)
 				{
 					String question = "";
 					String correctAnswer = "";
@@ -244,7 +253,7 @@ public class IfController
 						JOptionPane.showMessageDialog(null, "Sorry, that's the wrong answer. The correct answer was " + correctAnswer + ".");
 					}
 				}
-				JOptionPane.showMessageDialog(null, "Congratulations! you got " + pointCount + " points!");
+				JOptionPane.showMessageDialog(null, "Congratulations! you got " + pointCount + "/5 points!");
 				String playAgain = JOptionPane.showInputDialog(null, "Would you like to play again? y/n:");
 				if (playAgain.toLowerCase().equals("n"))
 				{
@@ -254,7 +263,7 @@ public class IfController
 			else
 			{
 				int pointCount = 0;
-				for (int i = 0; i < 5; i++)
+				for (int i = 1; i <= 5; i++)
 				{
 					String question = "";
 					String correctAnswer = "";
@@ -293,7 +302,7 @@ public class IfController
 						JOptionPane.showMessageDialog(null, "Sorry, that's the wrong answer. The correct answer was " + correctAnswer + ".");
 					}
 				}
-				JOptionPane.showMessageDialog(null, "Congratulations! you got " + pointCount + " points!");
+				JOptionPane.showMessageDialog(null, "Congratulations! you got " + pointCount + "/5 points!");
 				String playAgain = JOptionPane.showInputDialog(null, "Would you like to play again? y/n:");
 				if (playAgain.toLowerCase().equals("n"))
 				{
